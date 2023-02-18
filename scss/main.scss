@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'ARCADE';
+  src: url(../fonts/ARCADE.TTF);
+}
+
+html {
+  --ff-arcade: 'ARCADE';
+  --ff-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+}
+
+h1 {
+  font-family: var(--ff-arcade);
+  font-size: 3rem !important;
+}
+
+.container-- {
+  // background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 0 2px rgb(97, 97, 97);
+
+}
+
+.container-- h1 {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+select {
+  -webkit-appearance: none;
+  padding: 5px 10px 5px 10px;
+  width: 100%;  
+  border: none;
+  outline: none;
+  margin-block: 5px;
+  font-size: 16px;
+  border-radius: 5px !important;
+  transform: translateX(1px);
+  margin: 0;
+}
+
+select.user-unit {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+#given, #result{
+  padding: 10px 20px 10px 5px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.user-unit {
+  background-color: rgb(228, 228, 228);
+}
+
+
+.parent-root {
+  margin-top: 20px;
+}
+
+#parent-label{
+  display: none;
+  position: relative;
+  color: white;
+}
+
+
+#parent-label.active{
+  display: block;
+}
+
+#parent-label p{
+  background-color: rgb(226, 226, 226);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: -120%;
+  top: 0px;
+  width: 200px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  font-size: 13px;
+  box-shadow: 0 0 2px rgb(97, 97, 97);
+}
+
+
+
+#parent-label i:hover ~ p,
+#root-label i:hover ~ p{
+  transform: scale(1);
+}
+
+#parent {
+  width: 100%;
+  padding: 10px 20px 10px 5px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+
+#root-label{
+  display: none;
+  position: relative;
+  color: white;
+}
+
+#root-label.active{
+  display: block;
+}
+
+
+
+#root {
+  width: 100%;
+  padding: 10px 20px 10px 5px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+#root-label p {
+  background-color: rgb(226, 226, 226);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: -120%;
+  top: -10px;
+  width: 200px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  font-size: 13px;
+  box-shadow: 0 0 2px rgb(97, 97, 97);
+}
+
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$customized-color: (
+  "gradient-black-green-1" : radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% ),
+
+  "black-1" : #2d2d2d
+); 
+
+$theme-colors: map-merge($customized-color , $theme-colors);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+

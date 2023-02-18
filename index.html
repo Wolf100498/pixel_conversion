@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise_16</title>
+
+
+  <!-------------- my css ---------------->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-------------- fontawesome icon ---------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-------------- google fonts ---------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+  <div class="container-- black-1">
+    <h1>Pixels Conversions</h1>
+  
+    <div class="sub-container">
+
+      <div style="margin-block: 10px;">
+        <select name="" id="unit">
+          <option value="pixel">Pixel</option>
+        </select>
+      </div>
+
+      <div class="row" onkeyup="converter()">
+        <div class="col-lg-6 col-md-6" id="left-cc">
+     <div class="input-group">
+            <input type="text" name="pixel" id="given" placeholder="Enter">
+            <select name="" class="user-unit" id="given-unit">
+              <option value="pixel">Pixel</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6" id="right-cc" onchange="converter()">
+
+          <div class="input-group">
+            <input type="text" name="pixel" id="result" placeholder="Result" readonly>
+
+            <select name="" class="user-unit" id="result-unit">
+              <option value="pixel" id="pixel">Pixel</option>
+              <option value="points" id="points">Points</option>
+              <option value="ems" id="ems">Ems</option>
+              <option value="rems" id="rems">Rems</option>
+            </select>
+          </div>
+
+          <div class="parent-root">
+            <label for="parent" class="parent-label" id="parent-label">
+            <i class="fa-solid fa-circle-question"></i>Parent: 
+            <input type="text" name="parent" id="parent"  value="16">
+            <p>In em unit, the base is the value of its parent's font-size.</p>
+            </label>
+    
+            <label for="root" class="root-label" id="root-label"><i class="fa-solid fa-circle-question"></i>Root: 
+            <input type="text" id="root" value="16">
+            <p>The base refers to the value of your base font. It is a font-size assigned to <html> element's style. Most browsers' default is 16px. </p>
+            </label>
+          </div>
+          
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-------------- my js ---------------->
+  <script src="main.js"></script>
+
+</body>
+
+</html>

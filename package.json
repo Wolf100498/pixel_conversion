@@ -1,0 +1,22 @@
+{
+  "name": "wd11_exercise16_lobo",
+  "version": "1.0.0",
+  "description": "exercise 16",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuelWolf04/WD11_EXERCISE16_LOBO.git"
+  },
+  "author": "ruel_lobo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuelWolf04/WD11_EXERCISE16_LOBO/issues"
+  },
+  "homepage": "https://github.com/RuelWolf04/WD11_EXERCISE16_LOBO#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
